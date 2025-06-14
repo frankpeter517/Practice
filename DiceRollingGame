@@ -1,1 +1,21 @@
 h
+import random
+
+count = 0
+while True:
+	choice = str(input("Roll the dice – Y/N?: ")).lower()
+	choice2 = int(input("How many dice would you like to roll?: "))
+	count += 1
+	die1 = random.randint(1, 6)
+	die2 = random.randint(1, 6)
+	if choice == "y" and choice2 == 2:
+		print (("You rolled a"), f'{die1}', ("and a"), f'{die2}')
+		print("Roll count: ", f'{count}')
+	elif choice == "y" and choice2 == 1:
+		print(("You rolled a"), f'{die1}')
+		print ("Roll count: " f'{count}')
+	elif choice == "n":
+		print("Thank you for playing")
+		break
+	else:
+		print("Invalid input")
